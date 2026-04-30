@@ -77,3 +77,14 @@ CREATE TABLE adaptacao (
   FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno) ON DELETE CASCADE,
   FOREIGN KEY (id_atividade) REFERENCES atividades(id_atividade) ON DELETE CASCADE
 );
+
+
+-- TURMA E ALUNOS 
+CREATE TABLE aluno_turma (
+  id_aluno INT NOT NULL,
+  id_turma INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id_aluno, id_turma),
+  FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno) ON DELETE CASCADE,
+  FOREIGN KEY (id_turma) REFERENCES turmas(id_turma) ON DELETE CASCADE
+);
