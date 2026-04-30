@@ -63,3 +63,17 @@ CREATE TABLE necessidades (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno) ON DELETE CASCADE
 );
+
+
+
+-- ADAPTAÇÃO 
+CREATE TABLE adaptacao (
+  id_adaptacao INT PRIMARY KEY AUTO_INCREMENT,
+  tipo_adaptacao VARCHAR(100),
+  descricao TEXT,
+  id_aluno INT NOT NULL,
+  id_atividade INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno) ON DELETE CASCADE,
+  FOREIGN KEY (id_atividade) REFERENCES atividades(id_atividade) ON DELETE CASCADE
+);
