@@ -54,3 +54,12 @@ CREATE TABLE atividades (
   FOREIGN KEY (id_materia) REFERENCES materia(id_materia),
   FOREIGN KEY (id_turma) REFERENCES turma(id_turma)
 );
+
+-- NECESSIDADE 
+CREATE TABLE necessidade (
+  id_necessidade INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(255) NOT NULL,
+  id_aluno INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+);
