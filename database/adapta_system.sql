@@ -56,7 +56,7 @@ CREATE TABLE atividades (
 );
 
 -- NECESSIDADE 
-CREATE TABLE necessidade (
+CREATE TABLE necessidades (
   id_necessidade INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(255) NOT NULL,
   id_aluno INT,
