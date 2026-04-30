@@ -1,7 +1,7 @@
 <?php
 class Aluno {
 private $conn;
-ublic function_contruct(conexao){
+public function_contruct(conexao){
 }
 
 
