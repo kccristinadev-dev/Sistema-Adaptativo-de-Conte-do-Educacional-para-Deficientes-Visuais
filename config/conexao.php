@@ -1,9 +1,9 @@
 <?php
 
-$servername = "sql208.infinityfree.com";
-$username   = "if0_41571166";
+$servername = ".com";
+$username   = "adapta_system";
 $password   = "sua_senha";
-$dbname     = "if0_41571166_adapta_system";
+$dbname     = "adapta_system";
 
 try {
     $conexao = new PDO(
